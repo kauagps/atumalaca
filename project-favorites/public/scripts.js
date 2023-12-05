@@ -36,8 +36,12 @@ function addElement({ name, url }) {
 
 function removeElement(element, { name, url }) {
 
-    element.removeChild(name)
-    
+    // element.parentNode.removeChild(name,url)
+
+    const li = element.parentNode;
+
+    // Remova o nó pai (li)
+    li.parentNode.removeChild(li);
 }
 
 form.addEventListener('submit', (event) => {
