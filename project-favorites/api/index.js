@@ -10,6 +10,9 @@ http.createServer((req, res) => {
     // if(req.url === '/name&url') {
     //    res.end('teste') 
     // }
+    res.writeHead(200, {
+        'Access-Control-Allow-Origin': '*'
+    })
 
     function writeFile(cb) {
         fs.writeFile(
